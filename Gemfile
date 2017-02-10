@@ -19,9 +19,10 @@ gem "jbuilder", "2.4.1"
 gem "config"
 gem "i18n-js"
 gem "paranoia", "~> 2.0"
+gem "font-awesome-rails"
 
 group :development, :test do
-  gem "mysql2", "~> 0.3.18"
+  gem "mysql2"
   gem "byebug", "9.0.0", platform: :mri
 end
 

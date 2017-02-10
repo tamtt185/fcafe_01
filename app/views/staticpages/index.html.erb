@@ -1,0 +1,170 @@
+<body>
+  <div id="page-container">
+    <header>
+      <div class="container">
+        <%= link_to root_path, class: "site-logo" do %>
+          <strong><%= t "home" %></strong>
+        <% end %>
+        <nav>
+          <ul class="site-nav">
+            <li>
+              <%= link_to t("contact"), "#" %>
+            </li>
+            <li>
+              <%= link_to t("about"), "#" %>
+            </li>
+            <li>
+              <%= link_to t("login"), "#" %>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="media-container">
+      <section class="site-section site-section-light site-section-top">
+        <div class="container text-center">
+          <h1 class="animation-slideDown">
+            <strong><%= t "welcome" %></strong>
+          </h1>
+          <h2 class="h3 animation-slideUp hidden-xs">
+            <%= t "explore_product" %>
+          </h2>
+        </div>
+      </section>
+      <%= image_tag "store_home.jpg", class: "media-image animation-pulseSlow" %>
+    </div>
+
+    <section class="site-content site-section">
+      <div class="container">
+        <div class="site-block text-center">
+          <div class="btn-group portfolio-filter">
+            <%= link_to t("all"), "#", class: "btn btn-primary active",
+              "data-category": "all" %>
+            <%= link_to t("category1"), "#", class: "btn btn-primary" %>
+            <%= link_to t("category2"), "#", class: "btn btn-primary" %>
+            <%= link_to t("category3"), "#", class: "btn btn-primary" %>
+          </div>
+        </div>
+        <div class="site-block">
+          <form action="" method="post">
+            <div class="input-group input-group-lg">
+              <input type="text" id="ecom-search" name="ecom-search" class="form-control text-center"
+                placeholder="<%= t "search_shop" %>">
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+          </form>
+        </div>
+        <h2 class="site-heading">
+          <strong><%= t "best" %></strong> <%= t "coffee_shop" %>
+        </h2>
+        <hr>
+        <div class="row store-items">
+          <div class="col-md-4">
+            <div class="store-item">
+              <%= link_to "#" do %>
+                <%= image_tag "photo26.jpg", class: "img-responsive"%>
+              <% end %>
+              <div class="store-item-info clearfix">
+                <span class="store-item-price themed-color-dark pull-right"
+                  data-element-offset="-1000">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </span>
+                <strong><%= link_to t("name_coffee"), "#" %></strong><br>
+                <small>
+                  <%= t "description" %>
+                </small>
+              </div>
+            </div>
+        </div>
+      </div>
+      <h2 class="site-heading">
+        <strong><%= t "all" %></strong> <%= t "coffee_shop" %>
+      </h2>
+      <hr>
+      <div class="row store-items">
+        <div class="col-md-4">
+          <div class="store-item">
+            <%= link_to "#" do %>
+              <%= image_tag "photo26.jpg", class: "img-responsive"%>
+            <% end %>
+            <div class="store-item-info clearfix">
+              <span class="store-item-price themed-color-dark pull-right"
+                data-element-offset="-1000">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </span>
+              <strong><%= link_to t("name_coffee"), "#" %></strong><br>
+              <small>
+                <%= t "description" %>
+              </small>
+            </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  </section>
+  <footer class="site-footer site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <h4 class="footer-heading"><%= t "about_us" %></h4>
+          <ul class="footer-nav list-inline">
+            <li><%= link_to t("company"), "#" %></a></li>
+            <li><%= link_to t("contact"), "#" %></a></li>
+            <li><%= link_to t("support"), "#" %></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <h4 class="footer-heading"><%= t "legal" %></h4>
+          <ul class="footer-nav list-inline">
+            <li><%= link_to t("licensing"), "#" %></a></li>
+            <li><%= link_to t("privacy_policy"), "#" %></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <h4 class="footer-heading"><%= t "follow_us" %></h4>
+          <ul class="footer-nav footer-nav-social list-inline">
+            <li>
+              <%= link_to "#" do %>
+                <i class="fa fa-facebook"></i>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <i class="fa fa-twitter"></i>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <i class="fa fa-google-plus"></i>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <h4 class="footer-heading"><span id="year-copy"><%= t "year" %></span> &copy; </h4>
+          <ul class="footer-nav list-inline">
+            <li>
+              <%= t "crafted_with" %>
+              <i class="fa fa-heart text-danger"></i>
+              <%= t "by_dtt" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <%= link_to "#", id: "to-top" do %>
+    <i class="fa fa-angle-up"></i>
+  <% end %>
+</body>
