@@ -1,0 +1,23 @@
+<header>
+  <div class="container">
+    <%= link_to root_path, class: "site-logo" do %>
+      <strong><%= t "home" %></strong>
+    <% end %>
+    <nav>
+      <ul class="site-nav">
+        <li>
+          <%= link_to t("shop_type"), admin_shop_types_path %>
+        </li>
+        <li>
+          <%= link_to t("contact"), "#" %>
+        </li>
+        <li>
+          <%= link_to t("about"), "#" %>
+        </li>
+        <li>
+          <%= link_to t("login"), "#" %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

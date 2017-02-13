@@ -4,9 +4,9 @@ class CreateShops < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :description
       t.string :address
-      t.integer :status
+      t.string :avatar
+      t.integer :status, default: 0
       t.references :user, foreign_key: true
-      t.references :album, foreign_key: true
       t.references :shop_type, foreign_key: true
 
       t.timestamps
