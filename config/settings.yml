@@ -7,3 +7,5 @@ users:
   image_max_size: 5242880
   avatar_size: 200
   image_type: "image/jpeg,image/gif,image/png"
+per_page: 10
+action_edit: "edit"
