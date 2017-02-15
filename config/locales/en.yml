@@ -29,6 +29,8 @@ en:
       loggin: "Log in"
       contact: "Contact"
       about: "About"
+    shop_owner_layout:
+      statistic: "Statistic"
   shared:
     error_messages:
       error_message: "The form contains "
@@ -128,3 +130,31 @@ en:
       not_found: "This product not found"
   images:
     max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
+  shop_owner:
+    suggestions:
+      update:
+        update_success: "You have %{status} the %{product}"
+        update_error: "You %{status} the %{product} unsuccessful"
+      destroy:
+        destroy_success: "Deleted the suggestion product successful"
+        destroy_error: "Deleted the suggestion product unsuccessful"
+      header_table:
+        index: "Index"
+        image: "Image"
+        product: "Product name"
+        description: "Description"
+        status: "Status"
+        action: "Action"
+      suggestion:
+        accept: "Accept"
+        reject: "Reject"
+        btn_delete: "Delete"
+        confirm_delete: "Product %{name} will be deleted. Do you to delete it?"
+      load_suggestion:
+        not_found: "This suggestion product not found"
+      layouts:
+        left_bar:
+          statistic: "Statistic"
+          products: "Products"
+          users: "Users"
+          suggestions: "Suggestions"

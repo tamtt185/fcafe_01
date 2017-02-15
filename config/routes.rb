@@ -3,9 +3,14 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :suggestions, except: [:update, :show, :edit]
+  resources :shops, only: [:index, :create, :destroy]
+
   namespace :admin do
     resources :shop_types
     get "/" => "staticpages#index"
   end
-  resources :shops, only: [:index, :create, :destroy]
+  
+  namespace :shop_owner do
+  	resources :suggestions, only: [:index, :update, :destroy]
+  end
 end
