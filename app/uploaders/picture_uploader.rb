@@ -1,9 +1,9 @@
 # encoding: utf-8
 
 class PictureUploader < CarrierWave::Uploader::Base
-  
+
   include CarrierWave::MiniMagick
- 
+
   if Rails.env.production?
     storage :fog
   else
@@ -12,7 +12,7 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   def default_url *args
     if model.class.name == User.name
-      ActionController::Base.helpers.asset_path("fallback/" + 
+      ActionController::Base.helpers.asset_path("fallback/" +
         [version_name, "avata_default.png"].compact.join('_'))
     end
   end
