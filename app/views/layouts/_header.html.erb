@@ -12,13 +12,16 @@
           <%= link_to t("create_cfshop"), shops_path %>
         </li>
         <li>
-          <%= link_to t("contact"), "#" %>
+          <%= link_to t(".contact"), "#" %>
         </li>
         <li>
-          <%= link_to t("about"), "#" %>
+          <%= link_to t(".about"), "#" %>
         </li>
         <li>
-          <%= link_to t("login"), "#" %>
+          <%= link_to t(".login"), new_user_session_path %>
+        </li>
+        <li>
+          <%= link_to t(".signup"), new_user_registration_path %>
         </li>
       </ul>
     </nav>

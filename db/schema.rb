@@ -135,12 +135,14 @@ ActiveRecord::Schema.define(version: 20170209065004) do
   create_table "suggestions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "description"
-    t.integer  "status"
-    t.integer  "album_id"
+    t.integer  "status",      default: 0
+    t.string   "image"
+    t.string   "deleted_at"
+    t.integer  "shop_id"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["album_id"], name: "index_suggestions_on_album_id", using: :btree
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["shop_id"], name: "index_suggestions_on_shop_id", using: :btree
     t.index ["user_id"], name: "index_suggestions_on_user_id", using: :btree
   end
 
@@ -199,7 +201,7 @@ ActiveRecord::Schema.define(version: 20170209065004) do
   add_foreign_key "rates", "users"
   add_foreign_key "shops", "shop_types"
   add_foreign_key "shops", "users"
-  add_foreign_key "suggestions", "albums"
+  add_foreign_key "suggestions", "shops"
   add_foreign_key "suggestions", "users"
   add_foreign_key "tables", "albums"
   add_foreign_key "tables", "shops"
