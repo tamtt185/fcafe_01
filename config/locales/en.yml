@@ -4,6 +4,7 @@ en:
   contact: "Contact"
   about: "About"
   login: "Login"
+  signup: "Sign up"
   search_shop: "Search Shop.."
   best: "Best"
   coffee_shop: "Coffee Shop"
@@ -25,3 +26,22 @@ en:
   category1: "Category 1"
   category2: "Category 2"
   category3: "Category 3"
+  shared:
+    error_messages:
+      error_message: "The form contains "
+      error: "error"
+  users:
+    max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
+    new:
+      signup: "Sign up"
+      signup_title: "Sign up"
+      create_btn: "Sign up"
+    show:
+      profile: "Profile"
+      name: "User name: "
+      email: "Email: "
+      phone_number: "Phone number: "
+      address: "Address: "
+      not_found: "User not found"
+    create:
+      welcome_message: "Welcome to Fcoffee"

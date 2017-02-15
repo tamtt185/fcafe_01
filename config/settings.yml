@@ -1,0 +1,9 @@
+users:
+  email_max_length: 255
+  name_max_length: 50
+  password_min_length: 6
+  address_max_length: 255
+  phone_max_length: 15
+  image_max_size: 5242880
+  avatar_size: 200
+  image_type: "image/jpeg,image/gif,image/png"
