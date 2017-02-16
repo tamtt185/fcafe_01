@@ -3,8 +3,8 @@ class ShopsController < ApplicationController
   before_action :load_shop_type, only: [:index, :edit]
 
   def index
-    @shops = Shop.order_date_desc.paginate page: params[:page],
-      per_page: Settings.per_page
+    @shops = Shop.order_date_desc.shop_by_user(current_user.id).waiting
+      .paginate page: params[:page], per_page: Settings.per_page
     @shop = Shop.new
   end
 

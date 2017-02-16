@@ -135,6 +135,11 @@ en:
   images:
     max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
   shop_owner:
+    albums:
+      create:
+        album_exist: "Album exist"
+      update:
+        album_exist: "Album exist"
     suggestions:
       update:
         update_success: "You have %{status} the %{product}"
@@ -182,3 +187,13 @@ en:
       update:
         success: "Success"
         not_success: "Not Success"
+      shops:
+        name: "Name"
+        address: "Address"
+        description: "Description"
+        album: "Album"
+        shop_type: "Shop type"
+        status: "Status"
+        action: "Action"
+        album_images: "Album Images"
+        albums: "Albums"
