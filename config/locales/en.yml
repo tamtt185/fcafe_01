@@ -1,9 +1,6 @@
 en:
   title: "Fcoffee"
   home: "Home"
-  contact: "Contact"
-  about: "About"
-  login: "Login"
   signup: "Sign up"
   search_shop: "Search Shop.."
   best: "Best"
@@ -26,6 +23,12 @@ en:
   category1: "Category 1"
   category2: "Category 2"
   category3: "Category 3"
+  layouts:
+    header:
+      signup: "Sign up"
+      loggin: "Log in"
+      contact: "Contact"
+      about: "About"
   shared:
     error_messages:
       error_message: "The form contains "
@@ -103,3 +106,25 @@ en:
       overview: "Overview"
       total_shop: "Total Shops"
       all_shop: "35000"
+  suggestions:
+    form:
+      product_name: "Product name"
+      description: "Description"
+    new:
+      add_suggestion: "Suggest new product"
+    create:
+      create_success: "Send suggest a new product successful"
+      create_error: "Send suggest a new product unsuccessful"
+    index:
+      all_suggestions: "List suggestion"
+      close: "Close"
+    destroy:
+      destroy_success: "Deleted successful"
+      destroy_error: "Deleted unsuccessful"
+    suggestion:
+      btn_delete: "Delete"
+      confirm_delete: "Product %{name} will be deleted. Do you to delete it?"
+    load_suggestion:
+      not_found: "This product not found"
+  images:
+    max_size_error: "Maximum file size is 5MB. Please choose a smaller file."

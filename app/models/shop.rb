@@ -8,7 +8,8 @@ class Shop < ApplicationRecord
   has_many :comments
   has_many :categories
   has_many :albums, dependent: :destroy
-
+  has_many :suggestions, dependent: :destroy
+  
   enum status: [:waiting, :approved, :rejected]
 
   validates :name, presence: true
