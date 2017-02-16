@@ -13,6 +13,7 @@
       <div id="page-container" class="sidebar-partial sidebar-visible-lg
         sidebar-no-animations">
           <%= render "admin/layouts/left_bar" %>
+          <%= render "admin/layouts/header" %>
           <%= yield %>
           <% flash.each do |message_type, message| %>
             <div class="alert alert-<%= message_type %>"><%= message %></div>

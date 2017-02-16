@@ -100,6 +100,10 @@ en:
         dropdown: "Dropdown"
         product: "Product"
         shop: "Shop"
+        shop_types: "Shop Types"
+        requests: "Requests"
+      header:
+        requests: "Requests"
     staticpages:
       dashboard: "Dashboard"
       product: "Product"
@@ -158,3 +162,23 @@ en:
           products: "Products"
           users: "Users"
           suggestions: "Suggestions"
+    requests:
+      index:
+        approve: "Approve"
+        reject: "Reject"
+        waiting: "Waiting"
+        approved: "Approved"
+        accepted: "Accepted"
+        rejected: "Rejected"
+  admin:
+    requests:
+      table:
+        name: "Name"
+        address: "Address"
+        description: "Description"
+        shop_type: "Shop Type"
+        status: "Status"
+        delete: "Delete"
+      update:
+        success: "Success"
+        not_success: "Not Success"
