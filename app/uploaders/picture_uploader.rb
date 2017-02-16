@@ -13,7 +13,10 @@ class PictureUploader < CarrierWave::Uploader::Base
   def default_url *args
     if model.class.name == User.name
       ActionController::Base.helpers.asset_path("fallback/" +
-        [version_name, "avata_default.png"].compact.join('_'))
+        [version_name, "avatar_default.png"].compact.join('_'))
+    elsif model.class.name == Shop.name
+      ActionController::Base.helpers.asset_path("fallback/" +
+        [version_name, "coffe_shop_default.png"].compact.join('_'))
     end
   end
 

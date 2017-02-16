@@ -21,6 +21,7 @@ gem "i18n-js"
 gem "paranoia", "~> 2.0"
 gem "font-awesome-rails"
 gem "devise"
+gem "ckeditor"
 
 group :development, :test do
   gem "mysql2"
