@@ -87,3 +87,19 @@ en:
   view_image: "View Image"
   cancel: "Cancel"
   my_shop: "My Shops"
+  admin:
+    layouts:
+      left_bar:
+        username: "Username"
+        dashboard: "Dashboard"
+        dropdown: "Dropdown"
+        product: "Product"
+        shop: "Shop"
+    staticpages:
+      dashboard: "Dashboard"
+      product: "Product"
+      shop: "Shop"
+      orders: "Orders"
+      overview: "Overview"
+      total_shop: "Total Shops"
+      all_shop: "35000"

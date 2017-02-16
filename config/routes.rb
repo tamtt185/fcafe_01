@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   namespace :admin do
     resources :shop_types
+    get "/" => "staticpages#index"
   end
   resources :shops
 end
