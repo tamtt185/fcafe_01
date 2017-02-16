@@ -7,10 +7,8 @@
   <td class="description"><%= suggestion.description.html_safe %></td>
   <td class="status"><%= suggestion.status %></td>
   <td class="action">
-    <% if suggestion.processing? %>
-      <%= link_to t(".btn_delete"), suggestion, method: :delete,
-        data: {confirm: t(".confirm_delete", name: suggestion.name)},
-        class: "btn btn-danger btn-action" %>
-    <% end %>
+    <%= link_to t(".btn_delete"), suggestion, method: :delete,
+      data: {confirm: t(".confirm_delete", name: suggestion.name)},
+      class: "btn btn-danger btn-action" %>
   </td>
 </tr>

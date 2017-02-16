@@ -18,3 +18,4 @@ suggestions:
 images:
   image_max_size: 5242880
   image_accept: "image/jpeg,image/gif,image/png"
+one: 1

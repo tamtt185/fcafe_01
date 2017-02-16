@@ -44,3 +44,47 @@ a:hover {
   padding: 10px 20px;
 }
 
+/*suggestion*/
+tr.display-suggestion{
+  th.index{
+    width: 50px;
+    text-align: center;
+  }
+  th.image{
+    width: 80px;
+    text-align: center;
+  }
+  th.description{
+    text-align: center;
+  }
+  th.status{
+    text-align: center;
+  }
+  th.action{
+    text-align: center;
+  }
+}
+tr.suggestion{
+  td.index{
+    width: 50px;
+    text-align: center;
+  }
+  td.image{
+    width: 80px;
+    text-align: center;
+  }
+  td.description{
+  }
+  td.action{
+    text-align: center;
+  }
+  td.status{
+    text-align: center;
+  }
+}
+.paginate{
+  text-align: center;
+}
+.text-center{
+  text-align: center;
+}
