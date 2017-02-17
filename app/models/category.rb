@@ -9,4 +9,7 @@ class Category < ApplicationRecord
     uniqueness: {case_sensitive: false}
 
   scope :newest, ->{order created_at: :desc}
+  scope :by_shop, ->shop_id do
+    where("shop_id = ? or shop_id is null", shop_id)
+  end
 end

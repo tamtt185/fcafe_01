@@ -23,6 +23,7 @@ gem "font-awesome-rails"
 gem "devise"
 gem "ckeditor"
 gem "awesome_nested_set"
+gem "cancancan", "~> 1.10"
 
 group :development, :test do
   gem "mysql2"

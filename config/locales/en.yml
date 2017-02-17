@@ -260,6 +260,51 @@ en:
     shops:
       index:
         table: "Table"
+          categories: "Categories"
+    categories:
+      index:
+        all_categories: "All categories"
+        new_category: "New category"
+        id: "ID"
+        name: "Category name"
+        parent_id: "Parent id"
+        owner: "Owner"
+        action: "Action"
+        root: "Root"
+        admin: "Admin"
+        edit: "Edit"
+        delete: "Delete"
+        shop_id: "shop_id"
+        choice_a_shop: "choice a shop"
+      new: 
+        new_category: "New category"
+      create:
+        category_existed: "This category existed"
+        create_success: "Create category successful"
+        relationship_error: "The category '%{name}' has %{num_product} products.
+          Please delete it before action"
+        not_found: "This category not found"
+      edit:
+        edit_category: "Edit category"
+      update:
+        update_success: "Updated successful"
+        update_error: "Updated unsuccessful"
+      destroy:
+        delete_success: "Deleted successful"
+        delete_error: "Deleted unsuccessful"
+        relationship_error: "This category has some sub category. Please delete
+          it before action"
+      form:
+        category_name: "Category name"
+        cancel: "Cancel"
+        parent_name: "Parent name"
+        none: "None"
+      load_category:
+        not_found: "This category not found"
+      load_parent_category:
+        not_found: "This category not found"
+      load_list_category:
+        not_found: "This category not found"
     requests:
       index:
         approve: "Approve"

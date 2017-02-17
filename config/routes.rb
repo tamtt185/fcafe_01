@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     resources :shops
     resources :albums
     resources :tables
+    resources :categories, except: :show
   end
 end

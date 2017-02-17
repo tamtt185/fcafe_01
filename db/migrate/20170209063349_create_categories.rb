@@ -6,7 +6,8 @@ class CreateCategories < ActiveRecord::Migration[5.0]
       t.integer :lft
       t.integer :rgt
       t.integer :depth, default: 0
-
+      t.references :shop, foreign_key: true
+      
       t.timestamps
     end
   end

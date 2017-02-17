@@ -26,8 +26,10 @@ ActiveRecord::Schema.define(version: 20170209065004) do
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth",      default: 0
+    t.integer  "shop_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.index ["shop_id"], name: "index_categories_on_shop_id", using: :btree
   end
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -187,6 +189,7 @@ ActiveRecord::Schema.define(version: 20170209065004) do
   end
 
   add_foreign_key "albums", "shops"
+  add_foreign_key "categories", "shops"
   add_foreign_key "comments", "users"
   add_foreign_key "coupons", "shops"
   add_foreign_key "images", "albums"
