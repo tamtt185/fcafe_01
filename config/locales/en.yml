@@ -92,26 +92,6 @@ en:
   view_image: "View Image"
   cancel: "Cancel"
   my_shop: "My Shops"
-  admin:
-    layouts:
-      left_bar:
-        username: "Username"
-        dashboard: "Dashboard"
-        dropdown: "Dropdown"
-        product: "Product"
-        shop: "Shop"
-        shop_types: "Shop Types"
-        requests: "Requests"
-      header:
-        requests: "Requests"
-    staticpages:
-      dashboard: "Dashboard"
-      product: "Product"
-      shop: "Shop"
-      orders: "Orders"
-      overview: "Overview"
-      total_shop: "Total Shops"
-      all_shop: "35000"
   suggestions:
     form:
       product_name: "Product name"
@@ -134,6 +114,90 @@ en:
       not_found: "This product not found"
   images:
     max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
+  admin:
+    layouts:
+      left_bar:
+        username: "Username"
+        dashboard: "Dashboard"
+        dropdown: "Dropdown"
+        product: "Product"
+        shop: "Shop"
+        shop_types: "Shop Types"
+        requests: "Requests"
+        categories: "Categories"
+        overview: " Overview"
+      header:
+        requests: "Requests"
+    staticpages:
+      dashboard: "Dashboard"
+      product: "Product"
+      shop: "Shop"
+      orders: "Orders"
+      overview: "Overview"
+      total_shop: "Total Shops"
+      all_shop: "35000"
+    categories:
+      index:
+        all_category: "All categories"
+        id: "ID"
+        parent_id: "Parent id"
+        name: "Category name"
+        action: "Action"
+        edit: "Edit"
+        delete: "Delete"
+        root: "root"
+        not_found: "This category not found"
+      new:
+        new_category: "New category"
+        edit_category: "Edit category"
+      create:
+        category_existed: "This category existed"
+        create_success: "Create category successful"
+        relationship_error: "The category '%{name}' has %{num_product} products.
+          Please delete it before action"
+        not_found: "This category not found"
+      edit:
+        edit_category: "Edit category"
+      update:
+        update_success: "Updated successful"
+        update_error: "Updated unsuccessful"
+      destroy:
+        delete_success: "Deleted successful"
+        delete_error: "Deleted unsuccessful"
+        relationship_error: "This category has some sub category. Please delete
+          it before action"
+      load_category:
+        not_found: "This category not found"
+      load_parent_category:
+        not_found: "This category not found"
+      load_list_category:
+        not_found: "This category not found"
+      form:
+        category_name: "Category name"
+        cancel: "Cancel"
+        parent_name: "Parent name"
+        none: "None"
+    requests:
+      table:
+        name: "Name"
+        address: "Address"
+        description: "Description"
+        shop_type: "Shop Type"
+        status: "Status"
+        delete: "Delete"
+      update:
+        success: "Success"
+        not_success: "Not Success"
+      shops:
+        name: "Name"
+        address: "Address"
+        description: "Description"
+        album: "Album"
+        shop_type: "Shop type"
+        status: "Status"
+        action: "Action"
+        album_images: "Album Images"
+        albums: "Albums"
   shop_owner:
     albums:
       create:
@@ -175,25 +239,3 @@ en:
         approved: "Approved"
         accepted: "Accepted"
         rejected: "Rejected"
-  admin:
-    requests:
-      table:
-        name: "Name"
-        address: "Address"
-        description: "Description"
-        shop_type: "Shop Type"
-        status: "Status"
-        delete: "Delete"
-      update:
-        success: "Success"
-        not_success: "Not Success"
-      shops:
-        name: "Name"
-        address: "Address"
-        description: "Description"
-        album: "Album"
-        shop_type: "Shop type"
-        status: "Status"
-        action: "Action"
-        album_images: "Album Images"
-        albums: "Albums"

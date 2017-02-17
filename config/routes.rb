@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   resources :shops
 
   namespace :admin do
-    resources :shop_types
     get "/" => "staticpages#index"
     resources :requests
+    resources :shop_types
+    resources :categories
   end
 
   namespace :shop_owner do
