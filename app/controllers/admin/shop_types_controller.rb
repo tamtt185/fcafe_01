@@ -1,5 +1,6 @@
 class Admin::ShopTypesController < ApplicationController
   before_action :load_shop_type, only: [:edit, :update, :destroy]
+  layout "admin_layout"
 
   def index
     @shop_types = ShopType.order_date_desc.paginate page: params[:page],

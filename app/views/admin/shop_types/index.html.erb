@@ -1,57 +1,54 @@
-<div class="page-container">
-  <section class="site-section site-section-light site-section-top
-    themed-background-dark">
-    <div class="container text-center">
-      <h1 class="animation-slideDown">
-        <strong><%= t "all_shop_type" %></strong>
-      </h1>
-    </div>
-  </section>
-</div>
-<section class="site-content site-section">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <button type = "button" class = "btn btn-info" data-toggle = "modal"
-      data-target = "#addShopType"><%= t "new_shop_type" %></button>
-      <div class="table-responsive">
-        <table class="table table-vcenter table-striped">
-          <tr>
-            <th><%= t "name" %></th>
-            <th colspan="2"><%= t "action" %></th>
-          </tr>
-          <% @shop_types.each do |shop_type| %>
-            <tr>
-              <td><%= shop_type.name %></td>
-              <td>
-                <div class="btn-group btn-group-xs">
-                  <%= link_to edit_admin_shop_type_path(shop_type),
-                    class: "btn btn-default" do %>
-                    <i class="fa fa-pencil"><%= t "edit" %></i>
-                  <% end %>
-                </div>
-              </td>
-              <td>
-                <%= link_to admin_shop_type_path(shop_type), method: :delete,
-                  data: {confirm: t("sure")}, class: "btn btn-danger" do %>
-                  <i class="fa fa-times"><%= t "delete" %></i>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </table>
+<div id="main-container">
+  <div id="page-content">
+    <div class="block full">
+      <div class="block-title">
+        <h2><strong><%= t "shop_types" %> </strong><%= t "overview" %></h2>
       </div>
-      <%= will_paginate %>
-    </div>
-  </div>
-  <div id = "addShopType" class = "modal fade" role = "dialog">
-    <div class = "modal-dialog">
-      <div class = "modal-content">
-        <%= render "form_shop_type" %>
-        <div class = "modal-footer">
-          <button type = button" class = "btn btn-default"
-            data-dismiss = "modal"><%= t "close" %></button>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <button type = "button" class = "btn btn-info" data-toggle = "modal"
+            data-target = "#addShopType"><%= t "new_shop_type" %></button>
+          <div class="table-responsive">
+            <table class="table table-vcenter table-striped">
+              <tr>
+                <th><%= t "name" %></th>
+                <th colspan="2"><%= t "action" %></th>
+              </tr>
+              <% @shop_types.each do |shop_type| %>
+                <tr>
+                  <td><%= shop_type.name %></td>
+                  <td>
+                    <div class="btn-group btn-group-xs">
+                      <%= link_to edit_admin_shop_type_path(shop_type),
+                        class: "btn btn-default" do %>
+                        <i class="fa fa-pencil"><%= t "edit" %></i>
+                      <% end %>
+                    </div>
+                  </td>
+                  <td>
+                    <%= link_to admin_shop_type_path(shop_type), method: :delete,
+                      data: {confirm: t("sure")}, class: "btn btn-danger" do %>
+                      <i class="fa fa-times"><%= t "delete" %></i>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </table>
+          </div>
+          <%= will_paginate %>
+          <div id = "addShopType" class = "modal fade" role = "dialog">
+            <div class = "modal-dialog modal-lg">
+              <div class = "modal-content">
+                <%= render "admin/shop_types/form_shop_type" %>
+                <div class = "modal-footer">
+                  <button type = button" class = "btn btn-default"
+                    data-dismiss = "modal"><%= t "close" %></button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
