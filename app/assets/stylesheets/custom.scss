@@ -574,3 +574,19 @@ h1{
 .shop-detail{
   height: 320px;
 }
+
+/*Users*/
+tr.display-users{
+  th.index{
+    width: 50px;
+  }
+  th.action{
+    width: 150px;
+  }
+  td.index{
+    width: 50px;
+  }
+  td.action{
+    width: 150px;
+  }
+}

@@ -126,6 +126,7 @@ en:
         requests: "Requests"
         categories: "Categories"
         overview: " Overview"
+        users: "Users"
       header:
         requests: "Requests"
     staticpages:
@@ -198,6 +199,37 @@ en:
         action: "Action"
         album_images: "Album Images"
         albums: "Albums"
+    users:
+      index:
+        users: "All Users"
+        index: "Index"
+        avatar: "Avatar"
+        name: "User name"
+        email: "Email"
+        phone_number: "Phone number"
+        address: "Address"
+        role: "Role"
+        action: "Action"
+      show:
+        user_detail: "User detail"
+        overview: "Overview"
+        user_name: "User name"
+        email: "Email"
+        phone_number: "Phone number"
+        address: "Address"
+        role: "Role"
+        cancel: "Cancel"
+      user:
+        delete_confirm: "The '%{name}' will be deleted. Are you sure to continue"
+        delete: "Delete"
+        set_user: "Set user"
+        set_mod: "Set mod"
+      update:
+        update_success: "Set %{role} role successful"
+        update_error: "Set %{role} role unsuccessful"
+      destroy:
+        destroy_success: "Deleted successful"
+        destroy_error: "Deleted unsuccessful"
   shop_owner:
     albums:
       create:

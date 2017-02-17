@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :requests, dependent: :destroy
   has_many :suggestions, dependent: :destroy
   has_many :shops, dependent: :destroy
+  
+  enum role: [:user, :staff, :shop_owner, :mod, :admin]
 
   validates :user_name, presence: true,
     length: {maximum: Settings.users.name_max_length}
@@ -25,7 +27,9 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, PictureUploader
   validate :image_size
-
+  
+  scope :newest, ->{order created_at: :desc}
+  
   private
   def image_size
     if avatar.size > Settings.users.image_max_size
