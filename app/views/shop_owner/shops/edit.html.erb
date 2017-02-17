@@ -18,7 +18,5 @@
   <%= f.label :avatar %>
   <%= f.file_field :avatar, accept: "image/jpeg,image/gif,image/png" %><br >
 
-  <%= f.hidden_field :user_id, value: current_user.id %>
-
-  <%= f.submit t("submit"), class: "btn btn-primary" %>
+  <%= f.submit t("edit"), class: "btn btn-primary" %>
 <% end %>
