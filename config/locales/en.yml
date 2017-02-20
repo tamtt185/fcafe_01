@@ -114,6 +114,13 @@ en:
       not_found: "This product not found"
   images:
     max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
+  tables:
+    table:
+      table_name: "Table name: %{name}"
+      table_location: "Loaction: %{location}"
+      table_seats: "Seats: %{seats} chairs"
+      unavailable: "Unavailable"
+      order: "Order"
   admin:
     layouts:
       left_bar:

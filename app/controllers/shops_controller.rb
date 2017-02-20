@@ -1,11 +1,19 @@
 class ShopsController < ApplicationController
-  before_action :load_shop, only: [:edit, :update, :destroy]
+  load_and_authorize_resource
   before_action :load_shop_type, only: [:index, :edit]
 
   def index
     @shops = Shop.order_date_desc.shop_by_user(current_user.id).waiting
       .paginate page: params[:page], per_page: Settings.per_page
     @shop = Shop.new
+  end
+  
+  def show
+    if params[:status].blank?
+      @tables = @shop.tables
+    else
+      @tables = @shop.tables.by_status params[:status]
+    end
   end
 
   def create

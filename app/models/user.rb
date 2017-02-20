@@ -9,7 +9,9 @@ class User < ApplicationRecord
   has_many :requests, dependent: :destroy
   has_many :suggestions, dependent: :destroy
   has_many :shops, dependent: :destroy
-
+  
+  enum role: [:user, :staff, :shop_owner, :mod, :admin]
+  
   validates :user_name, presence: true,
     length: {maximum: Settings.users.name_max_length}
   validates :address, presence: true, 
