@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   	resources :suggestions, only: [:index, :update, :destroy]
     resources :shops
     resources :albums
+    resources :tables
   end
 end

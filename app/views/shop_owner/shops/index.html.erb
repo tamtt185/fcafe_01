@@ -4,8 +4,9 @@
     <th><%= t ".address" %></th>
     <th><%= t ".description" %></th>
     <th><%= t ".shop_type" %></th>
+    <th><%= t ".table" %></th>
     <th><%= t ".album_images" %></th>
-    <th colspan="2"><%= t "action" %></th>
+    <th><%= t "action" %></th>
   </tr>
   <% @shops.each do |shop| %>
     <tr>
@@ -21,7 +22,10 @@
       <td><%= shop.address %></td>
       <td><%= shop.description.html_safe %></td>
       <td><%= shop.shop_type_name %></td>
-      <td><%= link_to t(".albums"), shop_owner_albums_path(id: shop.id) %>
+      <td><%= link_to t(".table"), shop_owner_tables_path(id: shop.id),
+        class: "label label-info" %></td>
+      <td><%= link_to t(".albums"), shop_owner_albums_path(id: shop.id),
+        class: "label label-success" %>
       </td>
       <td>
         <div class="btn-group btn-group-xs">
@@ -29,13 +33,11 @@
             class: "btn btn-default" do %>
             <i class="fa fa-pencil"><%= t "edit" %></i>
           <% end %>
+          <%= link_to shop_path(shop), method: :delete,
+            data: {confirm: t("sure")}, class: "btn btn-danger" do %>
+            <i class="fa fa-times"><%= t "cancel" %></i>
+          <% end %>
         </div>
-      </td>
-      <td>
-        <%= link_to shop_path(shop), method: :delete,
-          data: {confirm: t("sure")}, class: "btn btn-danger" do %>
-          <i class="fa fa-times"><%= t "cancel" %></i>
-        <% end %>
       </td>
     </tr>
   <% end %>

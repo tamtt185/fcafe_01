@@ -149,14 +149,13 @@ ActiveRecord::Schema.define(version: 20170209065004) do
 
   create_table "tables", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
+    t.string   "avatar"
     t.string   "location"
     t.integer  "status"
     t.integer  "num_chair"
-    t.integer  "album_id"
     t.integer  "shop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["album_id"], name: "index_tables_on_album_id", using: :btree
     t.index ["shop_id"], name: "index_tables_on_shop_id", using: :btree
   end
 
@@ -204,6 +203,5 @@ ActiveRecord::Schema.define(version: 20170209065004) do
   add_foreign_key "shops", "users"
   add_foreign_key "suggestions", "shops"
   add_foreign_key "suggestions", "users"
-  add_foreign_key "tables", "albums"
   add_foreign_key "tables", "shops"
 end

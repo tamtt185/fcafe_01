@@ -204,6 +204,32 @@ en:
         album_exist: "Album exist"
       update:
         album_exist: "Album exist"
+    tables:
+      index:
+        new_table: "New Table"
+        name: "Name"
+        number_chair: "Number Chair"
+        avatar: "Avatar"
+        action: "Action"
+        status: "Status"
+      create:
+        table_create: "Table Create"
+        table_not_create: "Table not create"
+      load_table:
+        table_not_found: "Table not found"
+      load_shop:
+        shop_not_found: "Shop not found"
+      destroy:
+        del_complete: "Delete complete"
+        not_delete: "Not delete"
+      update:
+        table_updated: "Table updated"
+        not_update: "Not update"
+      form_table:
+        add_table: "Add Table"
+        edit_table: "Edit Table"
+        save: "Save"
+        add : "Add"
     suggestions:
       update:
         update_success: "You have %{status} the %{product}"
@@ -231,6 +257,9 @@ en:
           products: "Products"
           users: "Users"
           suggestions: "Suggestions"
+    shops:
+      index:
+        table: "Table"
     requests:
       index:
         approve: "Approve"
