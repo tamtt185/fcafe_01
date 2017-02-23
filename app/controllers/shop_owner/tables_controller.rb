@@ -1,5 +1,8 @@
 class ShopOwner::TablesController < ApplicationController
   layout "shop_owner_layout"
+ 
+  before_action :authenticate_user!
+  before_action :check_shop_owner_permission
   before_action :load_table, only: [:edit, :update, :destroy]
   before_action :load_shop, only: :index
 
