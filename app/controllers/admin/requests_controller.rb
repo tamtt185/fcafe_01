@@ -1,7 +1,10 @@
 class Admin::RequestsController < ApplicationController
-  before_action :load_shop, only: [:update, :destroy]
   layout "admin_layout"
 
+  before_action :authenticate_user!
+  before_action :check_admin_permission
+  before_action :load_shop, only: [:update, :destroy]
+  
   def index
     @supports = Supports::RequestSupport.new params[:page]
   end

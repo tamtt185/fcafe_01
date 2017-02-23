@@ -1,0 +1,73 @@
+<div id="sidebar">
+  <div id="sidebar-scroll">
+    <div class="sidebar-content">
+      <a href="index.html" class="sidebar-brand">
+        <i class="fa fa-coffee"></i>
+        <span class="sidebar-nav-mini-hide">
+          <strong><%= t ".fcafe" %></strong>
+        </span>
+      </a>
+      <div class="sidebar-section sidebar-user clearfix sidebar-nav-mini-hide">
+        <div class="sidebar-user-avatar">
+          <a href="#">
+            <%= image_tag current_user.avatar %>
+          </a>
+        </div>
+        <div class="sidebar-user-name"><%= current_user.user_name %></div>
+        <div class="sidebar-user-links">
+          <%= link_to "#" do %>
+            <i class="fa fa-user"></i>
+          <% end %>
+          <%= link_to "#" do %>
+            <i class="fa fa-envelope-o"></i>
+          <% end %>
+          <%= link_to "#" do %>
+            <i class="fa fa-cog"></i>
+          <% end %>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa fa-sign-out"></i>
+          <% end %>
+        </div>
+      </div>
+      <ul class="sidebar-nav">
+        <li>
+          <%= link_to admin_path do %>
+            <i class="fa fa-home"></i>
+            <span class="sidebar-nav-mini-hide"><%= t ".dashboard" %></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-user"> </i>
+            <span class="sidebar-nav-mini-hide"><%= t ".users" %></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_shop_types_path do %>
+            <i class="fa fa-list"> </i>
+            <span class="sidebar-nav-mini-hide"><%= t ".shop_types" %></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_requests_path do %>
+            <i class="fa fa-envelope"></i>
+            <span class="sidebar-nav-mini-hide"><%= t ".requests" %></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-university"></i>
+            <span class="sidebar-nav-mini-hide"><%= t ".shop" %></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_categories_path do %>
+            <i class="fa fa-list"></i>
+            <span class="sidebar-nav-mini-hide"><%= t ".categories" %></span>
+          <% end %>
+        </li>
+      </ul>    
+    </div>
+  </div>
+</div>
+                

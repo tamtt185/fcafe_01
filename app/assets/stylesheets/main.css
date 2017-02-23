@@ -4073,3 +4073,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
     .block, .block.full {border: none !important; padding: 0 !important;}
     .block-title {margin: 0 0 20px !important;}
 }
+
+.image-gallery{
+    width: 200px;
+    height: 150px;
+    margin-bottom: 20px;
+}

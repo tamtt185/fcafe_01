@@ -1,30 +1,43 @@
-<div id="main-container">
-  <div id="page-content">
-    <div class="content-header">
-      <ul class="nav-horizontal text-center">
-        <li class="active">
-          <%= link_to admin_shop_types_path do %>
-            <i class="fa fa-bar-chart"></i><%= t "shop_types" %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to admin_requests_path do %>
-            <i class="fa fa-ambulance"></i><%= t "requests" %>
-          <% end %>
-        </li>
-        <li>
-          <a href="page_ecom_order_view.html">
-            <i class="gi gi-shopping_cart"></i>
-            <%= t "shop" %>
-          </a>
-        </li>
-        <li>
-          <a href="page_ecom_products.html">
-            <i class="gi gi-shopping_bag"></i>
-            <%= t "product" %>
-          </a>
-        </li>
-      </ul>
+<header class="navbar navbar-default">
+  <ul class="nav navbar-nav-custom">
+    <li>
+      <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar');">
+        <i class="fa fa-bars fa-fw"></i>
+      </a>
+    </li>
+  </ul>
+  <form action="#" method="post" class="navbar-form-custom" role="search">
+    <div class="form-group">
+      <input type="text" id="top-search" name="top-search" class="form-control" placeholder="Search..">
     </div>
-  </div>
-</div>
+  </form>
+  <ul class="nav navbar-nav-custom pull-right">
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+        <%= image_tag current_user.avatar %> <i class="fa fa-angle-down"></i>
+      </a>
+      <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
+        <li class="dropdown-header text-center"><%= t ".account" %></li>
+        <li class="divider"></li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-user fa-fw pull-right"></i>
+            <%= t ".profile" %>
+          <% end %>
+          <%= link_to "#" do %>
+            <i class="fa fa-cog fa-fw pull-right"></i>
+            <%= t ".settings" %>
+          <% end %>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-sign-out fa-fw pull-right"></i>
+            <%= t ".logout" %>
+          <% end %>
+        </li>
+        <li class="dropdown-header text-center"><%= t ".activity" %></li>
+      </ul>
+    </li>
+  </ul>
+</header>

@@ -1,0 +1,38 @@
+<div class="content-header">
+  <ul class="nav-horizontal text-center">
+    <li>
+      <%= link_to admin_shop_types_path do %>
+        <i class="fa fa-list"></i><%= t ".shop_types" %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to admin_requests_path do %>
+        <i class="fa fa-envelope"></i><%= t ".requests" %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to "#" do %>
+        <i class="fa fa-university"></i>
+        <%= t ".shops" %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to "#" do %>
+        <i class="fa fa-coffee"></i>
+        <%= t ".products" %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to "#" do %>
+        <i class="fa fa-user"></i>
+        <%= t ".users" %>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fa fa-sign-out"></i>
+        <%= t ".logout" %>
+      <% end %>
+    </li>
+  </ul>
+</div>

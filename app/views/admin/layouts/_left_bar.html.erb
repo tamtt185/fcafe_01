@@ -4,45 +4,47 @@
       <div class="sidebar-section sidebar-user clearfix sidebar-nav-mini-hide">
         <div class="sidebar-user-avatar">
           <a href="page_ready_user_profile.html">
-            <img src="" alt="avatar">
+            <%= image_tag current_user.avatar %>
           </a>
         </div>
-        <div class="sidebar-user-name"><%= t ".username" %></div>
-        <div class="sidebar-user-links">
-          <a href="page_ready_user_profile.html" data-toggle="tooltip"
-            data-placement="bottom" title="Profile"><i class="gi gi-user"></i></a>
-          <a href="#modal-user-settings" data-toggle="modal" class="enable-toolti"
-            data-placement="bottom" title="Settings"><i class="gi gi-cogwheel"></i></a>
-          <a href="login.html" data-toggle="tooltip" data-placement="bottom"
-            title="Logout"><i class="gi gi-exit"></i></a>
-        </div>
+        <div class="sidebar-user-name"><%= current_user.user_name %></div>
       </div>
       <ul class="sidebar-nav">
         <li>
-          <a href="index.html"><i class="gi gi-stopwatch sidebar-nav-icon"></i>
+          <%= link_to admin_path do %>
+            <i class="fa fa-home"></i>
             <span class="sidebar-nav-mini-hide"><%= t ".dashboard" %></span>
-          </a>
+          <% end %>
         </li>
-        <li class="active">
-          <a href="#" class="sidebar-nav-menu"><i class="fa fa-angle-left
-            sidebar-nav-indicator sidebar-nav-mini-hide"></i>
-            <i class="gi gi-shopping_cart sidebar-nav-icon"></i>
-            <span class="sidebar-nav-mini-hide"><%= t ".dropdown" %></span>
-          </a>
-          <ul>
-            <li>
-              <%= link_to t(".shop_types"), admin_shop_types_path %>
-            </li>
-            <li>
-              <%= link_to t(".categories"), admin_categories_path %>
-            </li>
-            <li>
-              <%= link_to t(".requests"), admin_requests_path %>
-            </li>
-            <li>
-              <a href=""><%= t ".shop" %></a>
-            </li>
-          </ul>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-user"> </i><%= t ".users" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_shop_types_path do %>
+            <i class="fa fa-list"> </i><%= t ".shop_types" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_requests_path do %>
+            <i class="fa fa-envelope"></i><%= t ".requests" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-university"></i><%= t ".shop" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-coffee"></i><%= t ".product" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to admin_categories_path do %>
+            <i class="fa fa-list"> </i><%= t ".categories" %>
+          <% end %>
         </li>
       </ul>
     </div>

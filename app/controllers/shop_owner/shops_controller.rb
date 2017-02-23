@@ -1,5 +1,8 @@
 class ShopOwner::ShopsController < ApplicationController
   layout "shop_owner_layout"
+  
+  before_action :authenticate_user!
+  before_action :check_shop_owner_permission
 
   def index
     @shops = Shop.order_date_desc.shop_by_user(current_user.id).approved
