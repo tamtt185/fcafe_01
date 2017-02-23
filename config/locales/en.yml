@@ -33,6 +33,8 @@ en:
       about: "About"
     shop_owner_layout:
       statistic: "Statistic"
+    admin_layout:
+      title: "Admin | Fcoffee"
   shared:
     error_messages:
       error_message: "The form contains "
@@ -130,6 +132,28 @@ en:
         overview: " Overview"
       header:
         requests: "Requests"
+        profile: "Profile"
+        settings: "Settings"
+        logout: "Logout"
+        activity: "Activity"
+        account: "Account"
+        search: "Search..."
+      header_content:
+        shop_types: "Shop types"
+        requests: "Requests"
+        shops: "Shops"
+        products: "Products"
+        users: "Users"
+        categories: "Categories"
+      sidebar:
+        fcafe: "Fcoffee"
+        dashboard: "Dashboard"
+        shop_types: "Shop types"
+        requests: "Requests"
+        shops: "Shops"
+        products: "Products"
+        users: "Users"
+        categories: "Categories"
     staticpages:
       dashboard: "Dashboard"
       product: "Product"
