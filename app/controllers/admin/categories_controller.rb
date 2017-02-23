@@ -1,9 +1,11 @@
 class Admin::CategoriesController < ApplicationController
   layout "admin_layout"
   
+  before_action :authenticate_user!
+  before_action :check_admin_permission
   before_action :load_category, only: [:edit, :update, :destroy]
   before_action :load_list_category, only: [:new, :edit]
-  
+
   def index
     @categories = Category.newest.paginate page: params[:page],
       per_page: Settings.categories.per_page
