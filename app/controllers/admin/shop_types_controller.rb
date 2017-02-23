@@ -1,6 +1,9 @@
 class Admin::ShopTypesController < ApplicationController
-  before_action :load_shop_type, only: [:edit, :update, :destroy]
   layout "admin_layout"
+
+  before_action :authenticate_user!
+  before_action :check_admin_permission
+  before_action :load_shop_type, only: [:edit, :update, :destroy]
 
   def index
     @shop_types = ShopType.order_date_desc.paginate page: params[:page],

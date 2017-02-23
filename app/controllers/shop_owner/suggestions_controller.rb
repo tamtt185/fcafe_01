@@ -1,9 +1,10 @@
 class ShopOwner::SuggestionsController < ApplicationController
+  layout "shop_owner_layout"
+ 
   before_action :authenticate_user!
+  before_action :check_shop_owner_permission
   before_action :load_suggestion, only: [:update, :destroy]
 
-  layout "shop_owner_layout"
-  
   def index
     @supports = Supports::SuggestionSupport.new params[:page]
   end
