@@ -9,13 +9,13 @@
       <%= form_for [:shop_owner, @table] do |f| %>
         <%= render "shared/error_messages", object: f.object %>
         <%= f.label :name %>
-        <%= f.text_field :name, required: true %><br >
+        <%= f.text_field :name, class: "form-control", required: true %><br >
 
         <%= f.label :location %>
-        <%= f.text_field :location, required: true %><br >
+        <%= f.text_field :location, class: "form-control", required: true %><br >
 
         <%= f.label :number_chair %>
-        <%= f.number_field :num_chair, min: Settings.one, required: true %><br >
+        <%= f.number_field :num_chair, min: Settings.one, class: "form-control", required: true %><br >
 
         <%= f.label :avatar %>
         <%= f.file_field :avatar %><br >

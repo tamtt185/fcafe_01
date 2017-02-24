@@ -1,45 +1,54 @@
-<button type = "button" class = "btn btn-info" data-toggle = "modal"
-  data-target = "#ModalTable"><%= t ".new_table" %></button>
-<table class="table table-vcenter table-striped">
-  <tr>
-    <th class="center"><%= t ".name" %></th>
-    <th class="center"><%= t ".number_chair" %></th>
-    <th class="center"><%= t ".location" %></th>
-    <th class="center"><%= t ".avatar" %></th>
-    <th class="center"><%= t ".status" %></th>
-    <th colspan="2" class="center"><%= t ".action" %></th>
-  </tr>
-  <% @tables.each do |table| %>
-    <tr>
-      <td><%= table.name %></td>
-      <td><%= table.num_chair %></td>
-      <td><%= table.location %></td>
-      <td class="image-table center"><%= image_tag table.avatar %></td>
-      <td><%= table.status %></td>
-      <td>
-        <div class="btn-group btn-group-xs">
-          <%= link_to edit_shop_owner_table_path(table),
-            class: "btn btn-default" do %>
-            <i class="fa fa-pencil"><%= t "edit" %></i>
-          <% end %>
-        </div>
-      </td>
-      <td>
-        <%= link_to shop_owner_table_path(table), method: :delete,
-          data: {confirm: t("sure")}, class: "btn btn-danger" do %>
-          <i class="fa fa-times"><%= t "delete" %></i>
+<div id="page-content">
+  <div class="block full">
+    <div class="block-title">
+      <h2><strong><%= t ".tables" %></strong></h2>
+    </div>
+    <div class="row">
+      <button type = "button" class = "btn btn-info" data-toggle = "modal"
+        data-target = "#ModalTable"><%= t ".new_table" %></button>
+      <hr>
+      <table class="table table-vcenter table-hover table-striped">
+        <tr class="display-table">
+          <th class="center"><%= t ".name" %></th>
+          <th class="center"><%= t ".number_chair" %></th>
+          <th class="center"><%= t ".location" %></th>
+          <th class="center"><%= t ".avatar" %></th>
+          <th class="center"><%= t ".status" %></th>
+          <th class="center action"><%= t ".action" %></th>
+        </tr>
+        <% @tables.each do |table| %>
+          <tr class="display-table">
+            <td><%= table.name %></td>
+            <td class="center"><%= table.num_chair %></td>
+            <td class="center"><%= table.location %></td>
+            <td class="image-table center"><%= image_tag table.avatar %></td>
+            <td class="center"><%= table.status %></td>
+            <td class="center">
+              <%= link_to edit_shop_owner_table_path(table),
+                class: "btn btn-default" do %>
+                <i class="fa fa-pencil"><%= t "edit" %></i>
+              <% end %>
+              <%= link_to shop_owner_table_path(table), method: :delete,
+                data: {confirm: t("sure")}, class: "btn btn-danger" do %>
+                <i class="fa fa-times"><%= t "delete" %></i>
+              <% end %>
+            </td>
+          </tr>
         <% end %>
-      </td>
-    </tr>
-  <% end %>
-</table>
-<div id = "ModalTable" class = "modal fade" role = "dialog">
-  <div class = "modal-dialog modal-lg">
-    <div class = "modal-content">
-      <%= render "form_table" %>
-      <div class = "modal-footer">
-        <button type = button" class = "btn btn-default"
-          data-dismiss = "modal"><%= t "close" %></button>
+      </table>
+      <div id = "ModalTable" class = "modal fade" role = "dialog">
+        <div class = "modal-dialog modal-lg">
+          <div class = "modal-content">
+            <%= render "form_table" %>
+            <div class = "modal-footer">
+              <button type = button" class = "btn btn-default"
+                data-dismiss = "modal"><%= t "close" %></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <%= will_paginate %>
       </div>
     </div>
   </div>
