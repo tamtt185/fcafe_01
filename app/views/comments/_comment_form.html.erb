@@ -1,0 +1,39 @@
+<% if user_signed_in? %>
+  <div class="avatar-comment">
+    <%= image_tag current_user.avatar %>
+  </div>
+  <div class="form-cmt">
+  <%= form_for @comment, remote: true do |f| %>
+      <div id="comment-form">
+        <div id="comment-text">
+          <%= f.text_area :content, class: "text_comment",
+            placeholder: t(".enter_comment") %>
+          <%= f.hidden_field :shop_id , value: shop.id %>
+        </div>
+        <span id="submit">
+          <%= f.submit t(".comment"), class: "btn btn-primary" %>
+        </span>
+        <div class="clr"></div>
+      </div>
+    <% end %>
+  </div>
+  <div class="clr"></div>
+<% else %>
+  <div class="form-cmt">
+  <%= form_for @comment, remote: true do |f| %>
+      <div id="comment-form">
+        <div id="comment-text">
+          <%= f.text_area :content, class: "text_comment",
+            placeholder: t(".enter_comment") %>
+          <%= f.hidden_field :shop_id , value: shop.id %>
+        </div>
+        <span id="submit">
+          <%= link_to t(".login_to_comment"), user_session_path,
+            class: "btn btn-primary" %>
+        </span>
+        <div class="clr"></div>
+      </div>
+    <% end %>
+  </div>
+  <div class="clr"></div>
+<% end %>

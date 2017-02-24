@@ -31,12 +31,14 @@ ActiveRecord::Schema.define(version: 20170209065004) do
   end
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "target_id"
-    t.integer  "target_type"
     t.string   "content"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "shop_id"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_comments_on_product_id", using: :btree
+    t.index ["shop_id"], name: "index_comments_on_shop_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
@@ -187,6 +189,8 @@ ActiveRecord::Schema.define(version: 20170209065004) do
   end
 
   add_foreign_key "albums", "shops"
+  add_foreign_key "comments", "products"
+  add_foreign_key "comments", "shops"
   add_foreign_key "comments", "users"
   add_foreign_key "coupons", "shops"
   add_foreign_key "images", "albums"

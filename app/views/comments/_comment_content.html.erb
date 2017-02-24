@@ -1,0 +1,22 @@
+<% comments.each do |comment| %>
+  <div id="comment-content">
+    <div class="avatar-comment"><%= image_tag comment.user_avatar %></div>
+    <strong class="name-cmt"><%= comment.user_name %> :</strong>
+    <div id="cmts_<%= comment.id %>">
+      <%= comment.content %>
+      <div class="time-comment">
+        <%= time_ago_in_words comment.created_at %> ago.<br >
+        <% if user_signed_in? %>
+          <% if current_user.is_user? comment.user %>
+            <%= link_to t("edit"), edit_comment_path(comment), remote: true,
+              class: "glyphicon glyphicon-pencil" %>
+            <%= link_to t("delete"), comment_path(comment),
+              class: "glyphicon glyphicon-trash", remote: true, method: :delete,
+              data: {confirm: t("sure")}%>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="clr"></div>
+<% end %>
