@@ -1,5 +1,5 @@
 class ShopsController < ApplicationController
-  before_action :load_shop, only: [:edit, :update, :destroy]
+  before_action :load_shop, except: [:new, :create, :index]
   before_action :load_shop_type, only: [:index, :edit]
 
   def index
@@ -18,8 +18,12 @@ class ShopsController < ApplicationController
     redirect_to :back
   end
 
-  def edit
+  def show
+    @comments = @shop.comments
+    @comment = Comment.new
+  end
 
+  def edit
   end
 
   def update

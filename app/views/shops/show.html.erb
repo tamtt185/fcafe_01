@@ -1,0 +1,30 @@
+<div class="page-container">
+  <section class="site-section site-section-light site-section-top
+    themed-background-dark">
+    <div class="container text-center">
+      <h1 class="animation-slideDown">
+        <strong><%= @shop.name %></strong>
+      </h1>
+    </div>
+  </section>
+</div>
+<section class="site-content site-section">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="image-show">
+        <%= image_tag @shop.avatar %>
+      </div>
+      <div class="infor-show">
+        <h2><strong><%= t "name" %>: <%= @shop.name %></strong></h2>
+        <h3><strong><%= t "address" %>: <%= @shop.address %></strong></h3>
+        <strong><%= t "description" %></strong>:
+        <%= @shop.description.html_safe %>
+      </div>
+    </div>
+  </div>
+  <div class="comment col-md-10 col-md-offset-1">
+    <h3><%= t ".comment" %></h3>
+    <%= render partial: "comments/comment",
+      locals: {comments: @comments, shop: @shop} %>
+  </div>
+</section>

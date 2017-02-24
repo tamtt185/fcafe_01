@@ -420,7 +420,7 @@ rateit {
 }
 .rateit.rateit-font .rateit-reset:hover, .rateit.rateit-font button.rateit-reset:focus {
   background: #e6574b; /* Old browsers */
-  background: radial-gradient(ellipse at center, #e6574b 55%,#f6836b 77%,#f9d3cc 100%); 
+  background: radial-gradient(ellipse at center, #e6574b 55%,#f6836b 77%,#f9d3cc 100%);
   background-position: 0 0;
 }
 .store-item-image img{
@@ -573,4 +573,58 @@ h1{
 
 .shop-detail{
   height: 320px;
+}
+
+.avatar-comment img{
+  width: 100px;
+  height: 70px;
+  float: left;
+  margin-right: 10px;
+}
+.save-cmt{
+  float:left;
+}
+#comment-text{
+  float:left;
+  margin-right: 20px;
+}
+#comment-form{
+  margin-top: 20px;
+}
+#comment-content{
+  padding-top: 40px;
+}
+.time-comment{
+  margin-left: 100px;
+}
+.cmt-cont{
+  float: left;
+}
+.name-cmt{
+  float:left;
+  margin-right: 10px;
+}
+.content_edit{
+  height: 25px;
+  float: left;
+}
+.save-cmt{
+  float: left;
+}
+.content_edit{
+  margin-top: -15px;
+}
+.save-cmt input{
+  margin-top: -15px;
+  margin-left: 10px;
+}
+.comment{
+  margin-top: 70px;
+}
+.image-show img{
+  width: 350px;
+  height: 300px;
+  float: left;
+  margin-right: 50px;
+  margin-bottom: 100px;
 }

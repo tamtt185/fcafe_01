@@ -14,19 +14,23 @@ class User < ApplicationRecord
   
   validates :user_name, presence: true,
     length: {maximum: Settings.users.name_max_length}
-  validates :address, presence: true, 
+  validates :address, presence: true,
     length: {maximum: Settings.users.address_max_length}
-  validates :phone_number, presence: true, 
+  validates :phone_number, presence: true,
     length: {maximum: Settings.users.phone_max_length}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-  validates :email, presence: true, 
-    length: {maximum: Settings.users.email_max_length}, 
+  validates :email, presence: true,
+    length: {maximum: Settings.users.email_max_length},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
-  validates :password, presence: true, 
+  validates :password, presence: true,
     length: {minimum: Settings.users.password_min_length}, allow_nil: true
 
   mount_uploader :avatar, PictureUploader
   validate :image_size
+
+  def is_user? user
+    self == user
+  end
 
   private
   def image_size

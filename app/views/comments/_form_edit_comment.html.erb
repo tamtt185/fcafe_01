@@ -1,0 +1,9 @@
+<%= form_for @comment, remote: true do |f| %>
+  <div class="form-group">
+    <%= f.text_area :content, class: "content_edit", value: @comment.content,
+      remote: true %>
+  </div>
+  <div class="save-cmt">
+    <%= f.submit t("save"), class: "btn btn-primary" %>
+  </div>
+<% end %>
