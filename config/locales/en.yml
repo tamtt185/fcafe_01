@@ -35,6 +35,8 @@ en:
       statistic: "Statistic"
     admin_layout:
       title: "Admin | Fcoffee"
+    shop_owner_layout: 
+      title: "Shop owner | Fcoffee"
   shared:
     error_messages:
       error_message: "The form contains "
@@ -120,16 +122,6 @@ en:
     max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
   admin:
     layouts:
-      left_bar:
-        username: "Username"
-        dashboard: "Dashboard"
-        dropdown: "Dropdown"
-        product: "Product"
-        shop: "Shop"
-        shop_types: "Shop Types"
-        requests: "Requests"
-        categories: "Categories"
-        overview: " Overview"
       header:
         requests: "Requests"
         profile: "Profile"
@@ -225,6 +217,30 @@ en:
         album_images: "Album Images"
         albums: "Albums"
   shop_owner:
+    layouts:
+      header:
+        account: "Account"
+        profile: "Profile"
+        settings: "Settings"
+        logout: "Logout"
+        activity: "Activity"
+        search: "Search..."
+      header_content:
+        shop_types: "Shop types"
+        requests: "Requests"
+        shops: "Shops"
+        products: "Products"
+        users: "Users"
+        categories: "Categories"
+      sidebar:
+        fcafe: "Fcoffee"
+        statistic: "Statistic"
+        shop_types: "Shop types"
+        requests: "Requests"
+        shops: "Shops"
+        products: "Products"
+        users: "Users"
+        categories: "Categories"
     albums:
       create:
         album_exist: "Album exist"
