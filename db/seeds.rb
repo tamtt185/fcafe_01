@@ -14,6 +14,14 @@ User.create!(user_name: "User account", email: "user@gmail.com",
   password: "123123", role: 0, password_confirmation: "123123",
   address: "123 Ngo Thi Nham", phone_number: "0987138191")
 
+City.create!(name: "Da Nang")
+
+District.create!(name: "Lien Chieu", city_id: 1)
+District.create!(name: "Hai Chau", city_id: 1)
+District.create!(name: "Ngu Hanh Son", city_id: 1)
+District.create!(name: "Thanh Khe", city_id: 1)
+District.create!(name: "Cam Le", city_id: 1)
+
 30.times do |n|
   name  = Faker::Name.name
   email = "user-#{n+1}@gmail.com"

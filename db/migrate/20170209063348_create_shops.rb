@@ -8,6 +8,7 @@ class CreateShops < ActiveRecord::Migration[5.0]
       t.integer :status, default: 0
       t.references :user, foreign_key: true
       t.references :shop_type, foreign_key: true
+      t.references :district, foreign_key: true
 
       t.timestamps
     end

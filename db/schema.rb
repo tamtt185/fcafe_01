@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170209065004) do
+ActiveRecord::Schema.define(version: 20170227085424) do
 
   create_table "albums", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(version: 20170209065004) do
     t.integer  "depth",      default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "cities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -51,6 +57,14 @@ ActiveRecord::Schema.define(version: 20170209065004) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["shop_id"], name: "index_coupons_on_shop_id", using: :btree
+  end
+
+  create_table "districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.integer  "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_districts_on_city_id", using: :btree
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -129,8 +143,10 @@ ActiveRecord::Schema.define(version: 20170209065004) do
     t.integer  "status",       default: 0
     t.integer  "user_id"
     t.integer  "shop_type_id"
+    t.integer  "district_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.index ["district_id"], name: "index_shops_on_district_id", using: :btree
     t.index ["shop_type_id"], name: "index_shops_on_shop_type_id", using: :btree
     t.index ["user_id"], name: "index_shops_on_user_id", using: :btree
   end
@@ -159,6 +175,21 @@ ActiveRecord::Schema.define(version: 20170209065004) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["shop_id"], name: "index_tables_on_shop_id", using: :btree
+  end
+
+  create_table "taggings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "shop_id"
+    t.integer  "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_taggings_on_shop_id", using: :btree
+    t.index ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
+  end
+
+  create_table "tags", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -193,6 +224,7 @@ ActiveRecord::Schema.define(version: 20170209065004) do
   add_foreign_key "comments", "shops"
   add_foreign_key "comments", "users"
   add_foreign_key "coupons", "shops"
+  add_foreign_key "districts", "cities"
   add_foreign_key "images", "albums"
   add_foreign_key "order_product_items", "order_products"
   add_foreign_key "order_product_items", "products"
@@ -203,9 +235,12 @@ ActiveRecord::Schema.define(version: 20170209065004) do
   add_foreign_key "products", "albums"
   add_foreign_key "products", "categories"
   add_foreign_key "rates", "users"
+  add_foreign_key "shops", "districts"
   add_foreign_key "shops", "shop_types"
   add_foreign_key "shops", "users"
   add_foreign_key "suggestions", "shops"
   add_foreign_key "suggestions", "users"
   add_foreign_key "tables", "shops"
+  add_foreign_key "taggings", "shops"
+  add_foreign_key "taggings", "tags"
 end

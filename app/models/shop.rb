@@ -1,7 +1,8 @@
 class Shop < ApplicationRecord
   belongs_to :user
   belongs_to :shop_type
-
+  belongs_to :district
+  
   has_many :tables, dependent: :destroy
   has_many :coupons, dependent: :destroy
   has_many :rates
@@ -9,6 +10,8 @@ class Shop < ApplicationRecord
   has_many :categories
   has_many :albums, dependent: :destroy
   has_many :suggestions, dependent: :destroy
+  has_many :taggings
+  has_many :tags, through: :taggings
 
   delegate :name, to: :shop_type, prefix: "shop_type", allow_nil: true
 
